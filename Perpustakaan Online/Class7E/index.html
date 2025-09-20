@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 E-LibraryClass</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loading" class="loading-overlay">
+        <div class="loading-spinner">
+            <div class="book-icon">📚</div>
+            <p>Memuat perpustakaan...</p>
+        </div>
+    </div>
+
+    <div id="notification" class="notification hidden">
+        <span id="notification-message"></span>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>📚 E-LibraryClass</h1>
+                </div>
+                <nav class="nav">
+                    <a href="#" class="nav-link active" data-page="home">🏠 Beranda</a>
+                    <a href="#" class="nav-link" data-page="favorites">💖 Favorit <span id="favorites-count" class="count-badge">0</span></a>
+                    <a href="#" class="nav-link" data-page="about">ℹ️ Tentang</a>
+                </nav>
+                <button class="dark-mode-btn" title="Ganti Mode Gelap/Terang">
+                    <span class="sun-icon">☀️</span>
+                    <span class="moon-icon">🌙</span>
+                </button>
+                <button id="menu-toggle" class="menu-toggle" aria-label="Buka Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>                  
+            </div>
+        </div>
+    </header>
+
+    <nav class="drawer-nav" id="drawer-nav">
+        <div class="drawer-header">
+          <h2>📚E-LibraryClass</h2>
+        </div>
+        <a href="#" class="nav-link active" data-page="home">🏠 Beranda</a>
+        <a href="#" class="nav-link" data-page="favorites">💖 Favorit <span id="favorites-count" class="count-badge">0</span></a>
+        <a href="#" class="nav-link" data-page="about">ℹ️ Tentang</a>
+        <div class="drawer-bottom">
+        <button class="dark-mode-btn" title="Mode Gelap / Terang">
+            <span class="sun-icon">☀️</span>
+            <span class="moon-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+      
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+
+    <main class="main">
+        <div id="home-page" class="page active">
+            <div class="container">
+                <section class="hero">
+                    <h2>Temukan Buku Menarik! 🌟</h2>
+                    <p>Jelajahi koleksi cerita seru, ensiklopedia menarik, dan kisah legenda yang cocok untuk siswa SMP.</p>
+                </section>
+
+                <section class="search-section">
+                    <div class="search-container">
+                        <div class="search-box">
+                            <input type="text" id="search-input" placeholder="🔍 Cari berdasarkan judul, penulis, atau kategori...">
+                        </div>
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-category="all">📚 Semua Buku</button>
+                            <button class="filter-btn" data-category="Cerpen">📖 Cerpen</button>
+                            <button class="filter-btn" data-category="Novel">📚 Novel</button>
+                            <button class="filter-btn" data-category="Ensiklopedia">🔬 Ensiklopedia</button>
+                            <button class="filter-btn" data-category="Legenda">⚔️ Legenda</button>
+                            <button class="filter-btn" data-category="Fiksi Ilmiah">🚀 Fiksi Ilmiah</button>
+                            <button id="reset-filters" class="reset-btn">🔄 Reset</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="books-section">
+                    <div id="no-results" class="no-results hidden">
+                        <div class="no-results-content">
+                            <div class="no-results-icon">😔</div>
+                            <h3>Buku tidak ditemukan</h3>
+                            <p>Coba ubah pencarian atau filter untuk menemukan lebih banyak buku.</p>
+                        </div>
+                    </div>
+                    <div id="books-grid" class="books-grid"></div>
+                </section>
+            </div>
+        </div>
+
+        <div id="detail-page" class="page">
+            <div class="container">
+                <div class="detail-content">
+                    <button id="back-btn" class="back-btn">← Kembali ke Perpustakaan</button>
+                    <div class="book-detail">
+                        <div class="book-detail-image">
+                            <img id="detail-cover" src="" alt="Sampul Buku">
+                        </div>
+                        <div class="book-detail-info">
+                            <h2 id="detail-title"></h2>
+                            <p class="detail-author">Penulis: <span id="detail-author"></span></p>
+                            <div class="detail-meta">
+                                <span id="detail-category" class="category-badge"></span>
+                                <span id="detail-year" class="year-badge"></span>
+                            </div>
+                            <p id="detail-description" class="detail-description"></p>
+                            <div class="detail-actions">
+                                <button id="favorite-btn" class="favorite-btn">
+                                    <span class="heart-icon">🤍</span>
+                                    <span class="btn-text">Tambah ke Favorit</span>
+                                </button>
+                                <button id="readmore-btn" class="readmore-btn">
+                                  📖 Baca Selengkapnya
+                              </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="favorites-page" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h2>💖 Buku Favoritmu</h2>
+                    <p>Buku yang kamu simpan untuk dibaca nanti</p>
+                </div>
+                <div id="favorites-empty" class="empty-state">
+                    <div class="empty-icon">💔</div>
+                    <h3>Belum ada favorit!</h3>
+                    <p>Mulai jelajahi buku dan tambahkan ke favorit dengan klik ikon hati.</p>
+                    <button class="cta-btn" data-page="home">Lihat Buku</button>
+                </div>
+                <div id="favorites-grid" class="books-grid"></div>
+            </div>
+        </div>
+
+        <div id="about-page" class="page">
+            <div class="container">
+                <div class="about-content">
+                    <div class="page-header">
+                        <h2>📖 Tentang Perpustakaan</h2>
+                        <p>Gerbang menuju cerita dan pengetahuan menakjubkan</p>
+                    </div>
+                    
+                    <div class="about-sections">
+                        <section class="about-section">
+                            <h3>🎯 Misi Kami</h3>
+                            <p>Kami menyediakan pengalaman perpustakaan digital yang menarik untuk siswa SMP. Koleksi kami meliputi novel seru, ensiklopedia informatif, legenda menegangkan, dan cerpen yang memikat untuk menginspirasi siswa dalam belajar.</p>
+                        </section>
+
+                        <section class="about-section">
+                            <h3>📚 Apa yang Kami Tawarkan</h3>
+                            <div class="features-grid">
+                                <div class="feature-card">
+                                    <div class="feature-icon">🔍</div>
+                                    <h4>Pencarian Mudah</h4>
+                                    <p>Cari buku berdasarkan judul, penulis, atau kategori</p>
+                                </div>
+                                <div class="feature-card">
+                                    <div class="feature-icon">💖</div>
+                                    <h4>Buku Favorit</h4>
+                                    <p>Simpan buku yang kamu sukai untuk dibaca nanti</p>
+                                </div>
+                                <div class="feature-card">
+                                    <div class="feature-icon">🌙</div>
+                                    <h4>Mode Gelap</h4>
+                                    <p>Beralih antara tema terang dan gelap untuk kenyamanan membaca</p>
+                                </div>
+                                <div class="feature-card">
+                                    <div class="feature-icon">📱</div>
+                                    <h4>Ramah Mobile</h4>
+                                    <p>Akses perpustakaan dari perangkat apa saja</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>📚 E-LibraryClass</h4>
+                    <p>Menginspirasi anak muda melalui literatur</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Tautan Cepat</h4>
+                    <a href="#" data-page="home">Beranda</a>
+                    <a href="#" data-page="favorites">Favorit</a>
+                    <a href="#" data-page="about">Tentang</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-links">
+                        <a href="#">Tiktok</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 E-LibraryClass.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
