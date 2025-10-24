@@ -21,13 +21,13 @@ const booksData = [
     },
     {
       id: 3,
-      title: "Tenggelamnya Kapal Van der Wijck",
-      author: "Hamka",
-      category: "Novel",
-      year: 1938,
-      cover: "./Cover Buku/Novel.png",
-      description: "Tragedi cinta antara Zainuddin dan Hayati yang terhalang perbedaan adat dan status sosial.",
-      link: "https://archive.org/details/tenggelamnya-kapal-van-der-wijck"
+      title: "Ghirah dan Tantangan Terhadap Islam",
+      author: "Prof. Dr.Hamka",
+      category: "Fiksi ilmiah",
+      year: 1982,
+      cover: "./Cover Buku/Fiksi ilmiah.png",
+      description: "Buku Ghirah dan Tantangan Terhadap Islam karya Buya Hamka membahas tentang semangat ghirah (kecemburuan atau kebanggaan) umat Islam terhadap agamanya dan tantangan yang menggerogoti semangat tersebut. Buku ini mengkritik hilangnya ghirah di kalangan umat Islam yang menyebabkan mereka tidak lagi merasa terhina saat Islam dihina, serta tantangan modern seperti sekularisme dan pengaruh Barat.",
+      link: "https://drive.google.com/file/d/1SvrX-z6ltEZIsZp38evVPRO4IvYaQsOJ/view?usp=drivesdk"
     },
     {
       id: 4,
@@ -1070,6 +1070,7 @@ window.addEventListener('resize', () => {
     }
 
 });
+
 
 
 
