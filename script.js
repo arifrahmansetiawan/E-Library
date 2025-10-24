@@ -4,20 +4,20 @@ const booksData = [
       title: "Vova Sangguyu",
       author: "Suryami",
       category: "Legenda",
-      year: 1922,
+      year: 2016,
       cover: "./Cover Buku/Legenda.png",
       description: "Vova Sanggayu menceritakan tentang Ijo, seorang pemuda gagah berani yang hidup bersama neneknya yang penyayang, Nenek Tupu. Cerita ini mengisahkan tentang nasihat Nenek Tupu agar Ijo menjaga pohon bakau bernama vova sanggayu yang ia tanam di pinggir pantai, karena penebangannya akan membawa kerugian besar. Cerita ini menekankan nilai-nilai kejujuran, tidak serakah, dan pentingnya menjaga lingkungan. ",
       link: "https://drive.google.com/file/d/10xS9wCxQmS2JHjlEHYNO3gcMT24CNNIt/view?usp=drivesdk"
     },
     {
       id: 2,
-      title: "Layar Terkembang",
-      author: "Sutan Takdir Alisjahbana",
-      category: "Novel",
-      year: 1936,
-      cover: "./Cover Buku/Novel.png",
-      description: "Kisah keluarga Indonesia yang menggambarkan semangat modernitas, pendidikan, dan perubahan sosial.",
-      link: "https://archive.org/details/layar-terkembang-sutan-takdir-alisjahbana"
+      title: "Ainun dan Manusia Daun",
+      author: "Mardiyanto",
+      category: "Legenda",
+      year: 2016,
+      cover: "./Cover Buku/Legenda.png",
+      description: "Cerita Ainun dan Manusia Daun mengisahkan tentang Ainun, seorang gadis yatim piatu, yang membantu ayahnya dan secara tidak sengaja bertemu dengan Manusia Daun, makhluk misterius yang membantunya. Cerita ini menekankan pentingnya menjaga alam, persahabatan, kebaikan, kesetiaan, dan saling tolong-menolong.",
+      link: "https://drive.google.com/drive/folders/12MDRGfV3BJHXeFRssYfonTKO4LBuDFhj"
     },
     {
       id: 3,
@@ -1070,5 +1070,6 @@ window.addEventListener('resize', () => {
     }
 
 });
+
 
 
