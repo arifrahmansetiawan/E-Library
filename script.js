@@ -6,7 +6,7 @@ const booksData = [
       category: "Legenda",
       year: 1922,
       cover: "./Cover Buku/Legenda.png",
-      description: "Novel klasik Indonesia tentang cinta Siti Nurbaya dan Samsulbahri yang terhalang adat serta kepentingan keluarga.",
+      description: "Vova Sanggayu menceritakan tentang Ijo, seorang pemuda gagah berani yang hidup bersama neneknya yang penyayang, Nenek Tupu. Cerita ini mengisahkan tentang nasihat Nenek Tupu agar Ijo menjaga pohon bakau bernama vova sanggayu yang ia tanam di pinggir pantai, karena penebangannya akan membawa kerugian besar. Cerita ini menekankan nilai-nilai kejujuran, tidak serakah, dan pentingnya menjaga lingkungan. ",
       link: "https://drive.google.com/file/d/10xS9wCxQmS2JHjlEHYNO3gcMT24CNNIt/view?usp=drivesdk"
     },
     {
@@ -1070,4 +1070,5 @@ window.addEventListener('resize', () => {
     }
 
 });
+
 
