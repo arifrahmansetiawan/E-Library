@@ -1,11 +1,11 @@
 const booksData = [
     {
       id: 1,
-      title: "Siti Nurbaya",
-      author: "Marah Rusli",
-      category: "Novel",
+      title: "Vova Sangguyu",
+      author: "Suryami",
+      category: "Legenda",
       year: 1922,
-      cover: "./Cover Buku/Novel.png",
+      cover: "./Cover Buku/Legenda.png",
       description: "Novel klasik Indonesia tentang cinta Siti Nurbaya dan Samsulbahri yang terhalang adat serta kepentingan keluarga.",
       link: "https://drive.google.com/file/d/10xS9wCxQmS2JHjlEHYNO3gcMT24CNNIt/view?usp=drivesdk"
     },
@@ -1070,3 +1070,4 @@ window.addEventListener('resize', () => {
     }
 
 });
+
