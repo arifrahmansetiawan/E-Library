@@ -17,7 +17,7 @@ const booksData = [
       year: 2016,
       cover: "./Cover Buku/Legenda.png",
       description: "Cerita Ainun dan Manusia Daun mengisahkan tentang Ainun, seorang gadis yatim piatu, yang membantu ayahnya dan secara tidak sengaja bertemu dengan Manusia Daun, makhluk misterius yang membantunya. Cerita ini menekankan pentingnya menjaga alam, persahabatan, kebaikan, kesetiaan, dan saling tolong-menolong.",
-      link: "https://drive.google.com/drive/folders/12MDRGfV3BJHXeFRssYfonTKO4LBuDFhj"
+      link: "https://drive.google.com/file/d/1jLhImwfuSh50hcF3kYd7efHd6H-Ioy7l/view?usp=drivesdk"
     },
     {
       id: 3,
@@ -1070,6 +1070,7 @@ window.addEventListener('resize', () => {
     }
 
 });
+
 
 
 
