@@ -7,7 +7,7 @@ const booksData = [
       year: 1922,
       cover: "./Cover Buku/Novel.png",
       description: "Novel klasik Indonesia tentang cinta Siti Nurbaya dan Samsulbahri yang terhalang adat serta kepentingan keluarga.",
-      link: "https://archive.org/download/siti-nurbaya-marah-rusli/Siti%20Nurbaya%20-%20Marah%20Rusli.pdf"
+      link: "https://drive.google.com/file/d/10xS9wCxQmS2JHjlEHYNO3gcMT24CNNIt/view?usp=drivesdk"
     },
     {
       id: 2,
@@ -1068,4 +1068,5 @@ window.addEventListener('resize', () => {
     if (window.innerWidth <= 768 && elements.booksGrid) {
         elements.booksGrid.style.gridTemplateColumns = '1fr';
     }
+
 });
